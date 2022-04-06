@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+
+	<title>{{ title }}</title>
+
+	<meta name="description" content="{{ description }}">
+
+	<meta name="keywords" content=""/>
+
+
+	<!-- OG? -->
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="/img/logo.png"/>
+    <link rel="image_src" href="https://clego.ru/img/logo.png"/>
+    <meta property="og:url" content="{{ gourl }}"/>
+    <meta property="og:description" content="{{ description }}"/>
+	<!-- OG! -->
+
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="/img/favicon.ico">
+
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.min-2.css">
+	<link rel="stylesheet" href="libs/Slick/slick.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<!-- <> -->
+	<script defer src="js/query.js"></script>
+	<script defer src="js/bootstrap.bundle.min.js"></script>
+
+	<script defer src="https://a.clego.ru/json/"></script>
+	<script defer src="js/feedback.js"></script>
+
+	<script defer src="js/slick.min.js"></script>
+	<script defer src="js/scripts.min.js"></script>
+
+<!-- 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZH64VCC8RE"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-ZH64VCC8RE');
+	</script>
+
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-456826139"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'AW-456826139');
+	</script> -->
+
+	<script>(function(w, c){(w[c]=w[c]||[]).push(function(){new zTracker({"id":"f0916d6805c4f1f212b4be134ab97c4a7220","metrics":{"metrika":"70013062","ga":"G-ZH64VCC8RE"},"cssClass":"phone-setremove","domain":"clego.ru"});});})(window, "zTrackerCallbacks");</script>
+	<script async id="zd_ct_phone_script" src="https://my.zadarma.com/js/ct_phone.min.js"></script>
+
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	   ym(70013062, "init", {
+	        clickmap:true,
+	        trackLinks:true,
+	        accurateTrackBounce:true,
+	        webvisor:true,
+	        ecommerce:"dataLayer"
+	   });
+
+	function metirkaAction() {
+		{{ goals|raw }}
+		gtag('event', 'conversion', {'send_to': 'AW-456826139/kZg_COWIhPABEJu66tkB'});
+	}
+
+	</script>
+
+<script type="text/javascript">
+
+$(function() {
+
+	$(window).scroll(function() {
+
+		if($(this).scrollTop() != 0) {
+
+			$('#toTop').fadeIn();
+
+		} else {
+
+			$('#toTop').fadeOut();
+
+		}
+
+	});
+
+	$('#toTop').click(function() {
+
+	$('body,html').animate({scrollTop:0},800);
+
+	});
+
+});
+
+</script>
+<style type="text/css">
+.accordion-flush .accordion-item {
+	border: solid 2px #B0DCF2;
+	margin-bottom: 10px;
+	border-radius: 20px;
+}
+.accordion-flush .accordion-item:first-child {
+	border-top: 2px #B0DCF2 solid;
+	border-radius: 20px;
+}
+.accordion-flush .accordion-item:last-child {
+	border-bottom: 2px #B0DCF2 solid;
+	border-radius: 20px;
+}
+.accordion-flush .accordion-item .accordion-button {
+	border-radius: 20px;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+	border-radius: 20px;
+}
+.nav-link {
+	padding: 0px;
+	display: inline;
+}
+
+.new_calculator select, .new_calculator input {
+  border: solid 2px #fee020;
+}
+.new_calculator input.input_value {
+  text-align: center;
+  max-width: 200px;
+  min-width: 100px;
+  /*margin: 0 auto;*/
+}
+.new_calculator_block {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  /*margin-top: 30px;*/
+  border-radius: 20px;
+  border: solid 1px #eaeaea;
+  box-shadow: 0px 0px 20px 0px rgba(54,44,29,0.1);
+  padding: 35px;
+}
+.new_calculator_sum {
+  /*background: #00bbf9;*/
+  /*color: #fff;*/
+  /*border-radius: 5px;*/
+  /*max-width: 300px;*/
+  /*text-align: center;*/
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: bold;
+}
+.new_calculator .col-form-label {
+  font-size: 14px;
+}
+#new_calc_summ {
+  font-size: 26px;
+}
+.new_calculator .btn-block {
+  width: 100%;
+}
+.new_calculator_info_text {
+	padding-top: 12px;text-align: center;font-size: 12px;
+}
+
+	#toTop {
+		text-align:center;
+		padding:5px;
+		position:fixed;
+		bottom:25px;
+		left:25px;
+		cursor:pointer;
+		display:none;
+		font-family:verdana;
+		font-size:11px;
+
+		font-size: 25px;
+		width: 50px;
+		font-weight: bold;
+		opacity: .9;
+		background: #00bbf9;
+		text-decoration: none;
+		-webkit-transition: 1s;
+		-moz-transition: 1s;
+		transition: 1s;
+		-webkit-box-shadow: 0 0 20px 3px rgba(0,0,0,0.18);
+		-moz-box-shadow: 0 0 20px 3px rgba(0,0,0,0.18);
+		box-shadow: 0 0 20px 3px rgba(0,0,0,0.18);
+		height: 50px;
+		-webkit-border-radius: 50px;
+		border-radius: 50px;
+		color: #fff;
+		z-index: 9999999;
+		border: solid 2px #fff;
+	}
+
+.dropdown-content {
+        overflow:auto;
+        max-height: 410px;
+        margin-top: -2px;
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 250px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border:solid 1px #c2c2c2;
+    }
+
+    .dropdown-content span {
+        display: block; padding: 4px 14px; font-weight: bold; background: #F7F7F7; font-size: 14px;
+    }
+    .dropdown-content a {
+        color: black;
+        font-size: 14px !important;
+        color:#494946;
+        padding: 8px 14px;
+        text-decoration: none;
+        display: block;
+        /*border-bottom: 1px solid #c2c2c2;*/
+    }
+
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    .dropdown:hover .dropdown-content {
+    	display: block;
+    	left: 0px;
+    }
+
+    .dropdown:hover .dropbtn {}
+
+    ul.SiteNac {
+        margin: 0px;
+    }
+
+    ul.SiteNac li {
+        display: inline;	/* Располагаем элементы по горизонтали */
+        list-style: none;	/* Убираем маркеры списка */
+        margin-right: 20px;
+    }
+    ul.SiteNac li:last-child {
+        margin-right: 0px;
+    }
+    ul.SiteNac li a {
+        font-size: 15px;
+        text-decoration:unset;
+    }
+
+    ul.SiteNacTop {
+        margin: 0px;
+        /*width: 100%;*/
+        text-align: right !important;
+    }
+
+    ul.SiteNacTop li {
+        display: inline;	/* Располагаем элементы по горизонтали */
+        list-style: none;	/* Убираем маркеры списка */
+        margin-right: 20px;
+    }
+    ul.SiteNacTop li:last-child {
+        margin-right: 0px;
+    }
+    ul.SiteNacTop li a {
+        font-size: 14px;
+        text-decoration:unset;
+    }
+    .SiteNacTopBg {
+        max-width: 100%;padding: 5px; background: #FDE54D;margin-bottom: 10px;
+    }
+
+    .fixedmeni {
+        padding-top: 0px !important;
+    }
+
+    @media screen and (max-width:981px) {
+        ul.SiteNac li {
+            display: block;
+            margin-bottom: 10px;
+        }
+        ul.SiteNac li a {
+            font-size: 18px;
+        }
+        .dropdown-content {
+            position: static;
+        }
+
+        .fixedmeni {
+            padding-top: 10px !important;
+        }
+    }
+
+    @media (min-width: 1099px) {
+        /*.hidden-md {*/
+        /*    display: none !important;*/
+        /*}*/
+    }
+
+
+
+
+    /* demo контейнер */
+    .demo {
+        max-width: 1024px;
+        padding: 0 20px;
+        margin: 5% 10%;
+    }
+    /* скрываем чекбоксы и блоки с содержанием */
+    .hide,
+    .hide + label ~ div {
+        display: none;
+    }
+    /* вид текста label */
+    .hide + label {
+        margin: 0;
+        padding: 0;
+        color: #00bbf9;
+        font-size: 18px;
+        cursor: pointer;
+        text-decoration-style: dashed;
+        text-decoration: underline;
+        display: inline-block;
+    }
+    /* вид текста label при активном переключателе */
+    .hide:checked + label {
+        color: red;
+        border-bottom: 0;
+    }
+    /* когда чекбокс активен показываем блоки с содержанием  */
+    .hide:checked + label + div {
+        display: block;
+        background: #efefef;
+        margin-left: 25px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        /* чуточку анимации при появлении */
+        -webkit-animation:fade ease-in 0.5s;
+        -moz-animation:fade ease-in 0.5s;
+        animation:fade ease-in 0.5s;
+    }
+    /* анимация при появлении скрытых блоков */
+    @-moz-keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1 }
+    }
+    @-webkit-keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1 }
+    }
+    @keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1 }
+    }
+    .hide + label:before {
+        background-color: #1e90ff;
+        color: #fff;
+        content: "\002B";
+        display: block;
+        float: left;
+        font-size: 14px;
+        font-weight: bold;
+        height: 16px;
+        line-height: 16px;
+        margin: 3px 5px;
+        text-align: center;
+        width: 16px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+    }
+    .hide:checked + label:before {
+        content: "\2212";
+    }
+    .hd-block {
+        display: block;
+        margin-bottom: 13px;
+    }
+
+
+
+@media screen and (max-width: 981px) {
+   .header__menu {
+      overflow:auto;
+      display: block;
+       padding: 100px 0px;
+    }
+
+}
+</style>
+</head>
+<body>
+
+
+<div id="toTop" > ^ </div>
+
+	<div class="header__top-line fixedmeni">
+		<div class="SiteNacTopBg hidden-xs">
+			<div class="container">
+				<div div class="row">
+					<div class="col-4">
+						<div class="btn-group dropup">
+						  <button class="btn btn-secondary dropdown-toggle btn-sm btn-header" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 0px 7px;">
+							{% for a in app_domains if a.id == domains_id.id %}
+							    {{ a.name }}
+							{% endfor %}
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="width: 150px; height: 300px; overflow: auto">
+							{% for a in app_domains if a.id != domains_id.id %}
+							    <li><a class="dropdown-item" href="https://{{ a.domain }}{{ url_domains }}">{{ a.name }}</a></li>
+							{% endfor %}
+						  </ul>
+						</div>
+					</div>
+					<div class="col-4">
+						<div style="font-size: 14px;">
+							<b>Email:</b> admin@clego.ru
+						</div>
+					</div>
+					<div class="col-4">
+						<div style="padding: 0px 20px;font-size: 14px;">
+							<b>Режим работы:</b> с 9:00-21:00 (без выходных)
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content" style="max-width: 1170px;">
+			<div class="header__hamburger">
+				<img src="/img/hamburger.svg" alt="hamburger">
+			</div>
+			<div class="header__top-line__logo">
+				<a href="/"><img src="/img/logo.png" alt="logo"></a>
+			</div>
+			<div class="header__top-line__menu">
+			<div class="header__close"></div>
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-list-item"><a href="/price/" class="menu-list-link">Цены</a></li>
+                        <li class="menu-list-item menu-list-link__hide">
+                            <a href="#" class="menu-list-link ">Услуги</a><span class="dropdown-button dropdown-button__screen"></span>
+                            <ul class="sub-menu-list sub-menu__screen">
+                                <li class="sub-menu-list__item sub-menu-list-item__hide">
+                                    <a href="/uborka-kvartir/" class="sub-menu-list-link">Уборка квартир </a><span class="dropdown-button"></span>
+                                    <ul class="sub-sub-menu-list ">
+                                        <div class="sub-sub-menu-flex">
+
+                                            <div class="sub-sub-menu__block">
+                                                <span>Виды уборок</span>
+                                                <li class="sub-sub-menu-list__item"><a href="/generalnaya-uborka-kvartiry/" class="sub-sub-menu-list-link">Генеральная</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/kompleksnaya-uborka-kvartir/" class="sub-sub-menu-list-link">Комплексная</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/uborka-kvartiry-posle-remonta/" class="sub-sub-menu-list-link">После ремонта</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/uborka-kvartir-v-novostroyke/" class="sub-sub-menu-list-link">В новостройке</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/uborka-kvartiry-posle-sdachi-v-arendu/" class="sub-sub-menu-list-link">После сдачи в аренду</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/uborka-kvartiry-posle-pojara/" class="sub-sub-menu-list-link">После пожара</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/uborka-elitnyh-kvartir/" class="sub-sub-menu-list-link">Элитных квартир</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/uborka-zapushchennyh-kvartir/" class="sub-sub-menu-list-link">Запущенных</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/srochnaya-uborka-kvartiry/" class="sub-sub-menu-list-link">Срочная</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/uborka-kvartir-posle-zatopleniya/" class="sub-sub-menu-list-link">После затопления</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/moyka-okon-v-kvartire/" class="sub-sub-menu-list-link">Мойка окон</a></li>
+                                            </div>
+                                            <div class="sub-sub-menu__block">
+                                                <span>Размер</span>
+                                                <li class="sub-sub-menu-list__item"><a href="/uborka-odnokomnatnyh-kvartir/" class="sub-sub-menu-list-link" >В однокомнатной</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/uborka-dvuhkomnatnyh-kvartir/" class="sub-sub-menu-list-link" >В двухкомнатной</a></li>
+                                                <li class="sub-sub-menu-list__item"><a href="/uborka-odnokomnatnyh-kvartir/" class="sub-sub-menu-list-link" >В трехкомнатной</a></li>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="sub-menu-list__item sub-menu-list-item__hide">
+                                    <a href="/uborka-domov/" class="sub-menu-list-link">Уборка домов </a><span class="dropdown-button"></span>
+                                    <ul class="sub-sub-menu-list sub-sub-menu-top__two">
+                                        <li class="sub-sub-menu-list__item"><a href="/generalnaya-uborka-doma/" class="sub-sub-menu-list-link">Генеральная</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/uborka-doma-posle-remonta/" class="sub-sub-menu-list-link">После ремонта</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/kompleksnaya-uborka-doma/" class="sub-sub-menu-list-link">Комплексная</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/srochnaya-uborka-doma/" class="sub-sub-menu-list-link">Срочная</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/moyka-okon-v-dome/" class="sub-sub-menu-list-link">Мойка окон</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="sub-menu-list__item sub-menu-list-item__hide">
+                                    <a href="/uborka-ofisov/" class="sub-menu-list-link">Уборка офисов </a><span class="dropdown-button"></span>
+                                    <ul class="sub-sub-menu-list sub-sub-menu-top__three">
+                                        <li class="sub-sub-menu-list__item"><a href="/regulyarnaya-uborka-ofisov/" class="sub-sub-menu-list-link">Регулярная</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/generalnaya-uborka-ofisov/" class="sub-sub-menu-list-link">Генеральная</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/uborka-ofisov-posle-remonta/" class="sub-sub-menu-list-link">После ремонта</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/ejednevnaya-uborka-ofisov/" class="sub-sub-menu-list-link">Ежедневная</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/moyka-okon-v-ofise/" class="sub-sub-menu-list-link">Мойка окон</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-menu-list__item sub-menu-list-item__hide">
+                                    <a href="/himchistka/" class="sub-menu-list-link">Химчистка </a><span class="dropdown-button"></span>
+                                    <ul class="sub-sub-menu-list sub-sub-menu-top__four">
+                                        <li class="sub-sub-menu-list__item"><a href="/himchistka-divanov/" class="sub-sub-menu-list-link">Химчистка диванов</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/himchistka-matrasov/" class="sub-sub-menu-list-link">Химчистка матрасов</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/himchistka-kovrov/" class="sub-sub-menu-list-link">Химчистка ковров</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/himchistka-kovrolina/" class="sub-sub-menu-list-link">Химчистка ковролина</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/himchistka-myagkoy-mebeli/" class="sub-sub-menu-list-link">Химчистка мягкой мебели</a></li>
+                                        <li class="sub-sub-menu-list__item"><a href="/himchistka-kojanoy-mebeli/" class="sub-sub-menu-list-link">Химчистка кожаной мебели</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-list-item"><a href="/o-kompanii/" class="menu-list-link">О нас</a></li>
+                        <li class="menu-list-item"><a href="/raboty/" class="menu-list-link">Наши работы</a></li>
+                        <li class="menu-list-item"><a href="/akcii/" class="menu-list-link">Акции и Скидки</a></li>
+                        <li class="menu-list-item"><a href="/faq/" class="menu-list-link">Вопрос ответ</a></li>
+                        <li class="menu-list-item"><a href="/contact/" class="menu-list-link">Контакты</a></li>
+                    </ul>
+                </nav>
+			</div>
+			<div class="header__top-line__number">
+				<a href="tel:84951091663" class="header__number phone-setremove" onclick="gtag('event', 'conversion', {'send_to': 'AW-456826139/p9lXCJzEiPEBEJu66tkB'});">8(495)109-16-63</a>
+				<!-- <div style="text-align: center;font-size: 13px;line-height: ;" class="hidden-md">с 9:00 до 21:00</div> -->
+			</div>
+		</div>
+	</div>
+
+<!-- 	<div style="padding: 10px 0px;background: #fb6888;border-bottom: 3px #FDE54D dashed;border-top: 3px #FDE54D dashed;margin: 0px 0px;74d72;">
+		<div class="container" style="max-width: 800px;">
+			<div class="row">
+				<div class="col-md-4">
+					<div style="text-align: center;">
+						<h2 style="color: #fff;font-weight: bold;text-align: center;margin-bottom: 0px;color:#FDE54D;">Скидка 10%</h2>
+						<span style="display: block;font-size: 13px;color: #fff;px;">действует до {{ date_action_promo }}</span>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div style="color: #fff;font-weight: bold;text-align: center;">
+						- На уборку квартир, домов<br>
+						- На химчистку мягкой мебели
+					</div>
+				</div>
+				<div class="col-md-3">
+						<a href="#modalForm" style="padding: 16px 26px; border-radius: 35px; background-color: #fee440; text-decoration: none; -webkit-transition: .1s all; -o-transition: .1s all;transition: .1s all; text-align: center; display: block; margin: 0 auto; max-width: 175px;">Заказать</a>
+				</div>
+
+			</div>
+		</div>
+	</div> -->
+
+      {%if content %}
+        {% include content %}
+      {% endif %}
+
+
+<div class="footer">
+	<div class="container_page">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-2">
+					<div class="footer_logo">
+						<img src="/img/logo.png" alt="logo" style="max-width: 85px;">
+					</div>
+				</div>
+				<div class="col-md-4 col-5">
+					<div class="footer__social">
+						<a href="https://vk.com/clego"><img src="/img/icon-vk.png" alt="icon"></a>
+<!-- 						<a href="https://www.instagram.com/clego_ru/"><img src="/img/icon-instagram.png" alt="icon"></a>
+						<a href="https://www.facebook.com/clegoru"><img src="/img/icon-facebook.png" alt="icon"></a> -->
+					</div>
+				</div>
+				<div class="col-md-4 col-5">
+					<div class="footer__number">
+						<a href="tel:84951091663" onclick="gtag('event', 'conversion', {'send_to': 'AW-456826139/p9lXCJzEiPEBEJu66tkB'});" class="phone-setremove">8 (495) 109 16 63</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container_page container_page_blue">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-6">
+					<ul>
+						<li><a href="/vidy-uborok/"><b>Уборка по виду</b></a></li>
+						<li> - <a href="/regulyarnaya-uborka/">Регулярная уборка</a></li>
+						<li> - <a href="/generalnaya-uborka/">Генеральная уборка</a></li>
+						<li> - <a href="/kompleksnaya-uborka/">Комплексная уборка</a></li>
+						<li> - <a href="/uborka-posle-remonta/">Уборка после ремонта</a></li>
+						<li> - <a href="/srochnaya-uborka/">Срочная уборка</a></li>
+						<li> - <a href="/uborka-posle-arendy/">Уборка после аренды</a></li>
+						<li> - <a href="/uborka-posle-dezinsekcii-tarakanov/">Уборка после дезинсекции тараканов</a></li>
+						<li> - <a href="/uborka-dlya-yuridicheskih-lic/">Уборка для юридических лиц</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-6">
+					<ul>
+						<li><a href="/uborka-pomeshcheniy/"><b>Уборка помещений</b></a></li>
+						<li> - <a href="/uborka-kvartir/">Уборка квартир</a></li>
+						<li> - <a href="/uborka-domov/">Уборка домов, коттеджей</a></li>
+						<li> - <a href="/klining-taunhausa/">Уборка таунхауса</a></li>
+						<li> - <a href="/uborka-ofisov/">Уборка офисов</a></li>
+						<li> - <a href="/uborka-skalad/">Уборка cкладов</a></li>
+
+					</ul>
+				</div>
+				<div class="col-md-3 col-6">
+					<ul>
+						<li><a href="/himchistka/"><b>Химчистка</b></a></li>
+						<li> - <a href="/himchistka-divanov/">Химчистка диванов</a></li>
+						<li> - <a href="/himchistka-matrasov/">Химчистка матрасов</a></li>
+						<li> - <a href="/himchistka-kovrov/">Химчистка ковров</a></li>
+						<li> - <a href="/himchistka-kovrolina/">Химчистка ковролина</a></li>
+						<li> - <a href="/himchistka-myagkoy-mebeli/">Химчистка мягкой мебели</a></li>
+						<li> - <a href="/himchistka-kojanoy-mebeli/">Химчистка кожаной мебели</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-6">
+					<ul>
+						<li><a href="/raboty/">Наши работы</a></li>
+						<li><a href="/contact/">Контакты</a></li>
+						{% if domains_id.main == '1' %}<li><a href="/blog/">Блог</a></li>{% endif %}
+						<li><a href="/uslugi/">Услуги</a></li>
+						<li><a href="/price/">Цены</a></li>
+						<li><a href="/faq/">Вопрос ответ</a></li>
+						<li><a href="/sitemap/">Карта сайта</a></li>
+						<li><a href="/rabota-klinerom/">Работа клинером</a></li>
+					</ul>
+				</div>
+<!-- 				<div class="col-md-4 col-6">
+					<div style="font-size: 16px; font-weight: bold;">Поделиться страницей</div>
+					<script src="https://yastatic.net/share2/share.js"></script>
+					<div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="container_page">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+
+					<div itemscope itemtype="http://schema.org/Organization">
+					  <span itemprop="name">Клининговая компания CleGo</span>
+					  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					    Адрес:
+					    <span itemprop="streetAddress">{{ domains_id.adress }}</span>
+					  </div>
+					  Телефон:<span itemprop="telephone" style="font-weight: bold;" class="phone-setremove"> 8 (495) 109-16-63</span>,
+					  Email: <span itemprop="email" style="font-weight: bold;">admin@clego.ru</span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div>
+						<b>ООО "НОВЫЕ ТЕХНОЛОГИИ"</b>
+						<br>
+						<b>ИНН:</b> 7725488236, <b>КПП:</b> 772501001
+						<br>
+						<b>ОГРН:</b> 1187746363232
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="btn-group dropup">
+					  <button class="btn btn-secondary dropdown-toggle btn-sm btn-header" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+						{% for a in app_domains if a.id == domains_id.id %}
+						    {{ a.name }}
+						{% endfor %}
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="width: 150px; height: 300px; overflow: auto">
+						{% for a in app_domains if a.id != domains_id.id %}
+						    <li><a class="dropdown-item" href="https://{{ a.domain }}">{{ a.name }}</a></li>
+						{% endfor %}
+					  </ul>
+					</div>
+				</div>
+				<div class="cold-md-12">
+				    <div class="container">
+					    <div style="text-align: center;padding: 20px 0px;">
+					      <img src="/img/1.png" style="width:70px;vertical-align: -webkit-baseline-middle;">
+					      <img src="/img/2.png" style="width:70px;vertical-align: -webkit-baseline-middle;">
+					      <img src="/img/3.png" style="width:70px;vertical-align: -webkit-baseline-middle;">
+					      <img src="/img/4.png" style="width:70px;vertical-align: -webkit-baseline-middle;">
+					      <img src="/img/5.png" style="width:70px;vertical-align: -webkit-baseline-middle;">
+					      <img src="/img/6.png" style="width:70px;vertical-align: -webkit-baseline-middle;">
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container_page container_page_blue">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<p>© 2020-2021 CleGo</p>
+				</div>
+				<div class="col-md-4">
+				    <a href="/oferta/" rel="nofollow" content="nofollow">Пользовательское соглашение</a>
+				</div>
+				<div class="col-md-4">
+				    <a href="/polit/" rel="nofollow" content="nofollow">Политикой конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/header-menu.js"></script>
+</body>
+</html>
